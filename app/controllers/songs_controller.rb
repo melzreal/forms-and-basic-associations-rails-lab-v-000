@@ -1,5 +1,6 @@
 class SongsController < ApplicationController
   def index
+      binding.pry
     @songs = Song.all
   end
 
@@ -12,7 +13,7 @@ class SongsController < ApplicationController
   end
 
   def create
-  
+
     @song = Song.new(song_params)
 
     if @song.save
