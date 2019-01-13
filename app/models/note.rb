@@ -4,10 +4,6 @@ class Note < ActiveRecord::Base
   belongs_to :song
 
 
-  def note_contents=(notes)
-    notes.each do |note|
-      self.notes << note
-    end
-  end
+
 
 end
