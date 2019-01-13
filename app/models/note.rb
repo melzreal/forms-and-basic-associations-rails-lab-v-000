@@ -6,7 +6,7 @@ class Note < ActiveRecord::Base
 
   def note_contents=(notes)
     notes.each do |note|
-      self.song.notes << note
+      self.notes << note
     end
   end
 
