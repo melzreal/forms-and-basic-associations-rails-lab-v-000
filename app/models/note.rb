@@ -4,10 +4,9 @@ class Note < ActiveRecord::Base
   belongs_to :song
 
 
-  def note_contents=(ids)
-    ids.each do |id|
-      song = Song.find(id)
-      self.notes << song
+  def note_contents=(notes)
+    notes.each do |note|
+      self.song.notes << note
     end
   end
 
